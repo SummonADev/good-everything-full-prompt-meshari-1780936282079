@@ -337,7 +337,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="What Customers Say"
             title="Real chocolate. Real stories."
-            subtitle='Over 500 five-star reviews across platforms. Here\'s what people actually say after visiting NazBro.'
+            subtitle="Over 500 five-star reviews across platforms. Here's what people actually say after visiting NazBro."
             light
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
