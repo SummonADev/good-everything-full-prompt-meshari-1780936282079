@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-choco: #3B1A08;
+  --color-choco-light: #5C2D12;
+  --color-cream: #FDF6EC;
+  --color-cream-dark: #F5E8D0;
+  --color-gold: #C89B3C;
+  --color-gold-light: #E0BC6A;
+  --color-burgundy: #7B1C2C;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FDF6EC;
+  color: #3B1A08;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.hero-pattern {
+  background-color: #3B1A08;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200,155,60,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(92,45,18,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(123,28,44,0.2) 0%, transparent 40%);
+}
+
+.chocolate-texture {
+  background-color: #2A1005;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(200,155,60,0.04) 10px,
+      rgba(200,155,60,0.04) 20px
+    );
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C89B3C, #E0BC6A, #C89B3C);
+}
+
+.product-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(59,26,8,0.2);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #C89B3C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.testimonial-card {
+  background: rgba(253, 246, 236, 0.08);
+  border: 1px solid rgba(200, 155, 60, 0.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C89B3C, transparent);
+  margin: 0 auto;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #C89B3C;
+  box-shadow: 0 0 0 2px rgba(200,155,60,0.2);
+}
