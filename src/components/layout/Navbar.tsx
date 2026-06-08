@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, ChocolateBar } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
 
 const links = [
